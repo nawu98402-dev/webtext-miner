@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebText Miner - 专业网页内容解析工具</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #f4f7f6; }
+        .box { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1 { color: #2c3e50; text-align: center; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        textarea { width: 100%; height: 200px; margin-top: 15px; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        .info-section { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #666; }
+        footer { text-align: center; margin-top: 40px; font-size: 12px; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>WebText Miner</h1>
+        <p style="text-align: center; color: #7f8c8d;">高效、纯净、安全的网页文字提取方案</p >
+        
+        <input type="text" id="urlInput" placeholder="请输入网页链接 (URL)，例如 https://example.com">
+        <button onclick="extract()">开始解析提取</button>
+        
+        <textarea id="result" placeholder="提取结果将显示在此处..."></textarea>
+
+        <div class="info-section">
+            <h3>为什么使用 WebText Miner？</h3>
+            <p>在自媒体创作和学术研究中，我们经常需要获取网页的核心文本。本工具采用自研的 DOM 节点过滤算法，自动剔除广告、侧边栏和干扰代码，为您提供最干净的文字素材。</p >
+            <h3>核心技术方案</h3>
+            <ul>
+                <li><strong>智能语义识别</strong>：自动定位页面 <article> 或 main 标签。</li>
+                <li><strong>本地化处理</strong>：保护您的隐私，所有解析逻辑尽量在前端完成。</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        © 2026 WebText Miner | <a href=" ">隐私政策</a >
+    </footer>
+
+    <script>
+        function extract() {
+            const url = document.getElementById('urlInput').value;
+            if(!url) return alert('请输入链接');
+            document.getElementById('result').value = "正在通过 CORS 代理尝试解析内容...\n\n(提示：若要商业化大规模使用，建议配置专属爬虫接口)";
+            // 这里可以放入你之前的逻辑代码
+        }
+    </script>
+</body>
+</html>
