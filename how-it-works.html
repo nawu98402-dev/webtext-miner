@@ -1,1 +1,27 @@
-这里是关于 WebText Miner 如何通过分析 DOM 树节点密度来提取正文的技术说明
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>技术文档 - WebText Miner 解析原理</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; background: #fff; }
+        h1 { border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        .back-link { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
+        a { color: #007bff; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>WebText Miner 如何工作？</h1>
+    <p>我们的核心算法基于 DOM（文档对象模型）树过滤技术。当您在首页输入一个 URL 时，本工具会执行以下专业步骤：</p >
+    <ul>
+        <li><strong>节点深度扫描</strong>：递归遍历页面中所有的 HTML 标签节点。</li>
+        <li><strong>语义化识别</strong>：自动剔除非正文区域，如导航栏（nav）、侧边栏（aside）和脚本（script）。</li>
+        <li><strong>文本密度计算</strong>：通过分析各区块的字符密度，精准锁定最可能是文章主体的区域。</li>
+    </ul>
+    <p>这种处理方式不仅提高了提取速度，还最大限度地保留了原文的段落逻辑。</p >
+
+    <div class="back-link">
+        <a href=" ">← 返回工具首页</a >
+    </div>
+</body>
+</html>
