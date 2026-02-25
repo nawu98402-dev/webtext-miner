@@ -7,18 +7,18 @@
         body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; background: #fff; }
         h1 { border-bottom: 2px solid #007bff; padding-bottom: 10px; }
         .back-link { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
-        a { color: #007bff; text-decoration: none; font-weight: bold; }
+        a { color: #007bff; text-decoration: none; font-weight: bold; font-size: 18px; }
     </style>
 </head>
 <body>
     <h1>WebText Miner 如何工作？</h1>
-    <p>我们的核心算法基于 DOM（文档对象模型）树过滤技术。当您在首页输入一个 URL 时，本工具会执行以下专业步骤：</p >
+    <p>我们的核心算法基于 DOM 树过滤技术。当您输入一个 URL 时，本工具会执行以下专业步骤：</p >
     <ul>
         <li><strong>节点深度扫描</strong>：递归遍历页面中所有的 HTML 标签节点。</li>
-        <li><strong>语义化识别</strong>：自动剔除非正文区域（如导航栏、广告脚本）。</li>
-        <li><strong>文本密度计算</strong>：精准锁定最可能是文章主体的区域。</li>
+        <li><strong>语义化识别</strong>：自动剔除导航栏、侧边栏和广告脚本等无关区域。</li>
+        <li><strong>文本密度计算</strong>：精准锁定字符密度最高的内容区块。</li>
     </ul>
-    <p>这种处理方式确保了提取内容的纯净度。所有的解析逻辑均在您的浏览器本地完成，保护隐私安全。</p >
+    <p>这种处理方式确保了提取内容的纯净度。解析逻辑完全在您的浏览器本地完成，保护隐私。</p >
 
     <div class="back-link">
         <a href="index.html">← 返回工具首页</a >
